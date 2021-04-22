@@ -1,0 +1,62 @@
+<%@ Page language="c#" AutoEventWireup="false" %>
+<%@ Import namespace="System.Collections"%>
+<%@ Import namespace="System.Collections.Specialized"%>
+<%@ Register Tagprefix="Custom" Tagname="MultiSelectCombo" Src="MultiSelectCombo.ascx" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 
+
+<html>
+  <head>
+    <title>Defult Page</title>
+    <meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+    <meta name="CODE_LANGUAGE" Content="C#">
+    <meta name=vs_defaultClientScript content="JavaScript">
+    <meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
+    <script language="javascript">
+    function OnSubmit()
+    {
+        document.Main.hid_selected_lang.value = GetDataListFromMultiSelectCombo();
+        document.Main.action = "MultiSelectComboBox.aspx";
+        return true;        
+    }
+    </script>
+  </head>
+  <body MS_POSITIONING="GridLayout">
+    
+    <form id="Main" method="post" runat="server">
+    <%
+        NameValueCollection opItems = new NameValueCollection();
+        opItems.Add("C#","Visual C#");
+        opItems.Add("VC++","Visual C++");
+        opItems.Add("VB","Visual Basic");
+        opItems.Add("J#","Visual J#");
+        Languege.ListItems = opItems;
+    %>
+        
+    Select Language: <Custom:MultiSelectCombo id="Languege" Name="Languege" MaxSize="2" MaxListHeight="4" runat="server"></Custom:MultiSelectCombo>
+    
+
+
+
+    <%
+    string sValues = Request["hid_selected_lang"];
+    if (sValues != null &&
+        sValues.Equals("-1"))
+    {
+        sValues = "None";
+    }
+    if (sValues != null && sValues != "")
+    {
+    %>
+    <label id="selected_lang" name="selected_lang">Selected Laguges : <%=sValues%></label>
+    <%}%>
+    
+    
+    
+
+    <input type="submit" value="Submit" onclick="OnSubmit()">
+    <input type="hidden" id="hid_selected_lang" name="hid_selected_lang">
+    
+    </form>
+    
+  </body>
+</html>

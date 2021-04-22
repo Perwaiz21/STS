@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+This is Testing for <br><b>Delivery head</b><br><br><br><br>
+<label for="Competency">	Competency :</label>
+
+<select name="cars" id="Competency">
+  <option value="L1">Value-1</option>
+  <option value="L2">Value-2</option>
+  <option value="L3">Value-3</option>
+  <option value="L4">Value-4</option>
+ 
+</select>
+<br><br>
+<label for="Customer Type">Customer Type :</label>
+<select name="Customer_Type" id="Customer_Type">
+  <option value="Customer-1">Customer-1</option>
+  <option value="Customer-2">Customer-2</option>
+  <option value="Customer-3">Customer-3</option>
+  <option value="Customer-4">Customer-4</option>
+</select>
+
+<br><br>
+<label for="Customer Industry">Customer Industry :</label>
+<select name="Customer_Industry" id="Customer_Industry">
+  <option value="Customer_Industry-1">Customer_Industry-1</option>
+  <option value="Customer_Industry-2">Customer_Industry-2</option>
+  <option value="Customer_Industry-3">Customer_Industry-3</option>
+  <option value="Customer_Industry-4">Customer_Industry-4</option>
+</select>
+
+</body>
+</html>

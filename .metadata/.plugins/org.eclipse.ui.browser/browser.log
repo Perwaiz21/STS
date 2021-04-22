@@ -1,0 +1,4 @@
+
+Feb 18, 2021 14:00:14.672 NEW SESSION
+Feb 18, 2021 14:00:14.672 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Feb 18, 2021 14:00:14.673 Can't find symbol 'eglSetDamageRegionKHR'.
